@@ -7,7 +7,7 @@ function carsproductlist(Array){
         let Styleproduct = Array.products[i];
         htmlContentToAppend +=
         `
-        <div class="containertext-center" >
+        <div class="containertext-center " >
               <div class="row">
                     <div class="col-sm-3">
                      <img src=`+Styleproduct.image+` alt="imagen del producto" class="img-thumbnail">

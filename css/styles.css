@@ -193,6 +193,10 @@ a.custom-card:hover {
 max-width: 960px;
 }
 
+.containertext-center{
+ padding-left: 20vh;
+}
+
 .imagenlogin{
   height: 50vh;
   background: url('../img/login.png');
@@ -223,3 +227,4 @@ max-width: 960px;
       background-color: orange;
       color:blue;
     }
+
