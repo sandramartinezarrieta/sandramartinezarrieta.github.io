@@ -197,7 +197,24 @@ max-width: 960px;
   height: 50vh;
   background: url('../img/login.png');
   background-position: center;
-  background-size: 50%;
+  background-size: 80%;
   background-repeat: no-repeat;
 
 }
+
+.propiedades{
+  box-sizing: border-box;
+  max-height: 90vw;
+  max-width:  50vw;
+
+}
+
+#email{
+  display: block;
+  height: 30px;
+  }
+  
+  #password1{
+    display: block;
+    height: 30px;
+    }
