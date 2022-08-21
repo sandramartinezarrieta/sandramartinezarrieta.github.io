@@ -7,15 +7,15 @@ function carsproductlist(Array){
         let Styleproduct = Array.products[i];
         htmlContentToAppend +=
         `
-        <div class="list-group-item list-group-item-action >
+        <div class="containertext-center" >
               <div class="row">
-                    <div class="col-3">
-                     <img src=`+Styleproduct.image+` alt="${Styleproduct.description}" class="img-thumbnail">
+                    <div class="col-sm-3">
+                     <img src=`+Styleproduct.image+` alt="imagen del producto" class="img-thumbnail">
                      </div>
-                     <div class="col">
+                     <div class="col-sm-6">
                        <div class="d-flex w-100 justify-content-between">
-                             <h4 class="mb-1">${Styleproduct.name}</h4>
-                             <small class="text-muted">${Styleproduct.productCount} artículos</small>
+                             <h4 class="mb-1">${Styleproduct.name} </h4>
+                             <small class="text-muted">${Styleproduct.soldCount} artículos</small>
                          </div>
                          <p class="mb-1">${Styleproduct.description}</p>
                     </div>

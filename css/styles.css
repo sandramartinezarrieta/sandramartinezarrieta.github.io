@@ -188,3 +188,16 @@ a.custom-card:hover {
 .checked {
   color: orange;
 }
+
+.col-sm-3{
+max-width: 960px;
+}
+
+.imagenlogin{
+  height: 50vh;
+  background: url('../img/login.png');
+  background-position: center;
+  background-size: 50%;
+  background-repeat: no-repeat;
+
+}

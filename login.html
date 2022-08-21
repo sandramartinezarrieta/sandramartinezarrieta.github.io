@@ -16,14 +16,29 @@
   </style>
 </head>
 
-<body>
-  <main class="mt-5">
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+<body class="text-center">
+  <main class="form-signin">
+    <form>
+    <div class="container"> 
+      <div class="imagenlogin">
       </div>
+        <div class="form-floating">
+          <h2 class="h3 mb-3 fw-normal"><strong>Inicio de sesión</strong></h2>
+          <h3 class="mb-3 fw-normal" > Email</h3>
+          <input type="email" class="form-control" id="email" name="email">
+          <br>
+        </div>
+
+        <div class="form-floating">
+          <h3 class="mb-3 fw-normal" > Contraseña</h3>
+          <input type="password" class="form-control" id="password1" name="password1">
+        <br>
+        </div>
+
+        <button class="btn btn-primary" type="button" id="validacion">Ingresar</button>
     </div>
-  </main>
+      </form>
+      </main>
   <footer class="text-muted">
     <div class="container">
       <p class="float-end">
@@ -36,5 +51,13 @@
   </footer>
   <script src="js/login.js"></script>
 </body>
+<div class="alert alert-success alert-dismissible fade" role="alert" id="alert-success">
+  <p>Datos guardados correctamente</p>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
 
+<div class="alert alert-danger alert-dismissible fade" role="alert" id="alert-danger">
+  <p>Los datos ingresados no cumplen con los requisitos solicitados : Recargue la pagina e ingrese los datos</p>
+  <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div> 
 </html>
