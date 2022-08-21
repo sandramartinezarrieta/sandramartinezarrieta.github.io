@@ -218,3 +218,8 @@ max-width: 960px;
     display: block;
     height: 30px;
     }
+
+    #list-container :hover {
+      background-color: orange;
+      color:blue;
+    }

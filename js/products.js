@@ -24,7 +24,7 @@ function carsproductlist(Array){
          `
          
         }
-    document.getElementById('cat-list-container').innerHTML= htmlContentToAppend;
+    document.getElementById('list-container').innerHTML= htmlContentToAppend;
     document.getElementById('name-to-change') = Array.catName;
 }
 
@@ -32,7 +32,7 @@ document.addEventListener("DOMContentLoaded",function(e){
     getJSONData(productcar)
     .then (function (resultObj){
         if (resultObj.status==="ok"){
-            Arraycar = resultObj.data;
+            Arraycar = resultObj.data; 
             carsproductlist(Arraycar)
         }
     })
