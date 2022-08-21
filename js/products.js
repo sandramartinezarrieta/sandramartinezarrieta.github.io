@@ -1,3 +1,4 @@
+const productcar = "https://japceibal.github.io/emercado-api/cats_products/101.json";
 let Arraycar =[];
 
 function carsproductlist(Array){
@@ -21,15 +22,19 @@ function carsproductlist(Array){
                 </div>
              </div> 
          `
-    }
+         
+        }
     document.getElementById('cat-list-container').innerHTML= htmlContentToAppend;
+    document.getElementById('name-to-change') = Array.catName;
 }
 
 document.addEventListener("DOMContentLoaded",function(e){
-    getJSONData(productcar).then (function (resultObj){
+    getJSONData(productcar)
+    .then (function (resultObj){
         if (resultObj.status==="ok"){
             Arraycar = resultObj.data;
             carsproductlist(Arraycar)
         }
     })
 })
+
