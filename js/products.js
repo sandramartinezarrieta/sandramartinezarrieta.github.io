@@ -1,4 +1,4 @@
-const productcar = "https://japceibal.github.io/emercado-api/cats_products/101.json";
+//onst productcar = "https://japceibal.github.io/emercado-api/cats_products/101.json";
 let Arraycar =[];
 
 function carsproductlist(Array){
@@ -24,12 +24,13 @@ function carsproductlist(Array){
          `
          
         }
-    document.getElementById('list-container').innerHTML= htmlContentToAppend;
-    document.getElementById('name-to-change') = Array.catName;
+        document.getElementById('name-to-change').innerHTML = Array.catName;
+        document.getElementById('list-container').innerHTML= htmlContentToAppend;
+    
 }
 
 document.addEventListener("DOMContentLoaded",function(e){
-    getJSONData(productcar)
+    getJSONData(PRODUCTS_URL + localStorage.catID + EXT_TYPE)
     .then (function (resultObj){
         if (resultObj.status==="ok"){
             Arraycar = resultObj.data; 
