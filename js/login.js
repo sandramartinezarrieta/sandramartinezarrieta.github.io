@@ -16,6 +16,9 @@ Validacion.addEventListener("click", function(){
           document.getElementById('blue').innerHTML = contenedor + " del Email"
           document.getElementById('red').innerHTML = contenedor + " de la contraseña"
     }
+    localStorage.setItem("user", email);
+    document.getElementById('login2').innerHTML = "ES UNA LOCURA";
+
 });
 
 
@@ -31,5 +34,7 @@ function showAlertError() {
 }
 
 
-        
+//document.getElementById("validacion").addEventListener("click", ()=>{
+    
+//}) 
 
