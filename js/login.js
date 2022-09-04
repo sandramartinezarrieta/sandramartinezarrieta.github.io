@@ -17,7 +17,8 @@ Validacion.addEventListener("click", function(){
           document.getElementById('red').innerHTML = contenedor + " de la contraseña"
     }
     localStorage.setItem("user", email);
-    document.getElementById('login2').innerHTML = "ES UNA LOCURA";
+    //document.getElementById('login2').innerHTML = "ES UNA LOCURA";
+    
 
 });
 
