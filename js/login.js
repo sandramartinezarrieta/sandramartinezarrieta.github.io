@@ -2,7 +2,7 @@
 var Validacion = document.getElementById("validacion");
 
 
-Validacion.addEventListener("click", function(){
+Validacion.addEventListener("click", function validar(){
     var email = document.getElementById("email").value;
     var password1 = document.getElementById("password1").value;
     var contenedor = ""
@@ -17,10 +17,10 @@ Validacion.addEventListener("click", function(){
           document.getElementById('red').innerHTML = contenedor + " de la contraseña"
     }
     localStorage.setItem("user", email);
-    //document.getElementById('login2').innerHTML = "ES UNA LOCURA";
-    
-
+    document.getElementById('login2').innerHTML = "ES UNA LOCURA";
 });
+
+
 
 
 
