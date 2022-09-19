@@ -43,6 +43,13 @@ document.getElementById("sortAsc").addEventListener("click", ()=> {
     Arrayproductos = Arrayproductos.sort((a, b) => { return a.cost - b.cost})
     carsproductlist(Arrayproductos)
 })
-
+document.getElementById("sortDesc").addEventListener("click", ()=> {
+    Arrayproductos = Arrayproductos.sort((a, b) => { return b.cost - a.cost})
+    carsproductlist(Arrayproductos)
+})
+document.getElementById("sortByCount").addEventListener("click", ()=> {
+    Arrayproductos = Arrayproductos.sort((a, b) => { return b.soldCount - a.soldCount})
+    carsproductlist(Arrayproductos)
+})
 })
 
