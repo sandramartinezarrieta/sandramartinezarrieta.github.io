@@ -1,10 +1,11 @@
 //onst productcar = "https://japceibal.github.io/emercado-api/cats_products/101.json";
 let Arraycar =[];
+let Arrayproductos = [];
 
 function carsproductlist(Array){
     let htmlContentToAppend = "";
-    for(let i = 0; i < Array.products.length; i++){
-        let Styleproduct = Array.products[i];
+    for(let i = 0; i < Array.length; i++){
+        let Styleproduct = Array[i];
         htmlContentToAppend +=
         `
         <div class="containertext-center " >
@@ -34,8 +35,14 @@ document.addEventListener("DOMContentLoaded",function(e){
     .then (function (resultObj){
         if (resultObj.status==="ok"){
             Arraycar = resultObj.data; 
-            carsproductlist(Arraycar)
+            Arrayproductos = resultObj.data.products
+            carsproductlist(Arrayproductos)
         }
     })
+document.getElementById("sortAsc").addEventListener("click", ()=> {
+    Arrayproductos = Arrayproductos.sort((a, b) => { return a.cost - b.cost})
+    carsproductlist(Arrayproductos)
+})
+
 })
 
