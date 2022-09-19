@@ -16,9 +16,10 @@ function carsproductlist(Array){
                      <div class="col-sm-6">
                        <div class="d-flex w-100 justify-content-between">
                              <h4 class="mb-1">${Styleproduct.name} </h4>
-                             <small class="text-muted">${Styleproduct.soldCount} artículos</small>
+                             <small class="text-muted">Articulos vendidos: ${Styleproduct.soldCount}</small>
                          </div>
                          <p class="mb-1">${Styleproduct.description}</p>
+                         <p class="mb-1">Valor: ${Styleproduct.cost}</p>
                     </div>
                 </div>
              </div> 
