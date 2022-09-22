@@ -2,13 +2,18 @@
 let Arraycar =[];
 let Arrayproductos = [];
 
+function setProdID(id) {
+    localStorage.setItem("prod", id);
+    window.location = "product-info.html"
+}
+
 function carsproductlist(Array){
     let htmlContentToAppend = "";
     for(let i = 0; i < Array.length; i++){
         let Styleproduct = Array[i];
         htmlContentToAppend +=
         `
-        <div class="containertext-center " >
+        <div class="containertext-center " onclick="setProdID(${Styleproduct.id})" >
               <div class="row">
                     <div class="col-sm-3">
                      <img src=`+Styleproduct.image+` alt="imagen del producto" class="img-thumbnail">
