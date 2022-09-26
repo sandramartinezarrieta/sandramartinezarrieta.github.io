@@ -35,26 +35,44 @@ function carsproductinfo(Array) {
          </p>
          <p></p>
          </div>
-       <div class="card-footer border-light mb-3 bg-transparent">Comentarios</div>
-       <div>
-       
-       <div class="form-check form-check-inline">
-       <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                
-     </div>
-     <div class="form-check form-check-inline">
-       <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="option2">
-       <label class="form-check-label" for="inlineCheckbox2">2</label>
-     </div>
-     <div class="form-check form-check-inline">
-       <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3" disabled>
-       <label class="form-check-label" for="inlineCheckbox3">3 (disabled)</label>
-     </div>
-             </div>   
+       <div class="card-footer border-light mb-3 bg-transparent">
+       <div><h3>Comentarios</h3>
+              
+                <div class="card" style="width: 18rem;">
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">An item</li>
+              <li class="list-group-item">A second item</li>
+              <li class="list-group-item">A third item</li>
+            </ul>
+          </div>
+     <br>
        </div>
+       <div> <h3>Comentar</h3>
+       <div class="mb-3">
+       <label for="exampleFormControlTextarea1" class="form-label">Tu opinion</label>
+       <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
      </div>
-       </div> 
-       <div></div>`
+        <label for="exampleFormControlTextarea1" class="form-label">Tu puntuación</label>
+        <div class="col-3">
+        <label class="visually-hidden" for="autoSizingSelect">Preference</label>
+        <select class="form-select" id="autoSizingSelect">
+          <option selected>Puntua</option>
+          <option value="1">1</option>
+          <option value="2">2</option>
+          <option value="3">3</option>
+          <option value="2">4</option>
+          <option value="3">5</option>
+
+        </select>
+      </div>
+       <br>
+       <div class="col-12">
+       <button class="btn btn-primary" type="submit">Enviar</button>
+     </div>
+       </div>
+       
+       
+       </div>`
     document.getElementById('info-container').innerHTML = htmlContentToAppend;
 }
 
@@ -68,3 +86,4 @@ document.addEventListener("DOMContentLoaded", function (e) {
             }
         })
 })
+
