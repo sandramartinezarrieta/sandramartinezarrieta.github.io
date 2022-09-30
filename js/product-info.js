@@ -178,6 +178,36 @@ document.addEventListener("DOMContentLoaded", function (e) {
             }
             
         }) 
+        getJSONData(PRODUCT_INFO_COMMENTS_URL + localStorage.catID + EXT_TYPE)
+        .then(function (resultObj) {
+            if (resultObj.status === "ok") {
+
+              Arraycomment = resultObj.data
+              productrelativ(Arraycomment)
+            }
+            
+        }) 
 })
+
+window.onload += function productrelativ(lista) {
+  let htmlContentToAppend = "";
+
+    for(let i = 0; i < lista.length; i++){
+        let category = lista[i];
+
+        
+            htmlContentToAppend += `
+            <div class="carousel-item">
+  <img src="..." alt="...">
+  <div class="carousel-caption d-none d-md-block">
+    <h5>...</h5>
+    <p>...</p>
+  </div>
+</div>
+            `
+        }
+
+}
+
 
 
