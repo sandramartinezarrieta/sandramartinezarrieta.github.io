@@ -196,6 +196,14 @@ document.addEventListener("DOMContentLoaded", function (e) {
     })
 })
 
+// funcion para abrir la ventana del producto al dar click sobre el carrusel
+function setProdID(id) {
+  localStorage.setItem("prod", id);
+  window.location = "product-info.html"
+}
+
+
+
 // funcion de carga para ingresar el carrusel de fotos
 function productrelativ(listacart) {
   let htmlAppend1 = "";
@@ -205,31 +213,54 @@ function productrelativ(listacart) {
   let Arraylistacart = listacart.products
   console.log(Arraylistacart)
 
-  
-   // ingreso del for en cada imagen y cada boton en las variables 
-     for (let i = 0; i < Arraylistacart.length; i++) {
+
+  // ingreso del for en cada imagen y cada boton en las variables 
+  for (let i = 0; i < Arraylistacart.length; i++) {
     let category = Arraylistacart[i];
     console.log(category);
     console.log(i)
+    // if para la generacion del primer slide activo aparte
+    if (i === 0) {
+      htmlAppend1 += `<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>`
+      htmlAppend2 += `<div class="carousel-item active" onclick="setProdID(${category.id})"data-bs-interval="10000">
+  <img src="${category.image}" class="d-block w-100" alt="${category.name}">
+  <div class="carousel-caption  d-md-block" onclick="setProdID(${category.id})">
+  <h5 class="text-white" style="background-color: #0e073e8f;font-weight: 550;">${category.name}</h5>
+    <p class="text-white" style="background-color: #0e073e8f;">${category.description}</p>
+  </div>
+</div>`
+    } else if(i == Arraylistacart.length-1){ 
+      htmlAppend1 += `<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="${i}" aria-label="Slide 0"></button>`
+    htmlAppend2 += `<div class="carousel-item" onclick="setProdID(${category.id})"data-bs-interval="2000">
+<img src="${category.image}" class="d-block w-100" alt="${category.name}">
+<div class="carousel-caption  d-md-block" onclick="setProdID(${category.id})">
+  <h5 class="text-white" style="background-color: #0e073e8f;font-weight: 550;">${category.name}</h5>
+  <p class="text-white" style="background-color: #0e073e8f;">${category.description}</p>
+</div>
+</div>`
+}
+    else{
 
-    htmlAppend1 += `<button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="${i}" aria-label="Slide ${i+=1}"></button> `
-    htmlAppend2 += `
-    <div class="carousel-item active" data-bs-interval="2000">
-    <img src="${category.image}" class="d-block w-100" alt="${category.name}">
-    <div class="carousel-caption d-none d-md-block">
-      <h5 class="text-white bg-dark">First slide label</h5>
-      <p class="text-white bg-dark">Some representative placeholder content for the first slide.</p>
-    </div>
-  </div> `
+      htmlAppend1 += `<button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="${i}" aria-label="Slide ${i += 1}"></button>`
+      htmlAppend2 += `<div class="carousel-item" onclick="setProdID(${category.id})"data-bs-interval="2000">
+  <img src="${category.image}" class="d-block w-100" alt="${category.name}">
+  <div class="carousel-caption  d-md-block" onclick="setProdID(${category.id})">
+    <h5 class="text-white" style="background-color: #0e073e8f;font-weight: 550;">${category.name}</h5>
+    <p class="text-white" style="background-color: #0e073e8f;">${category.description}</p>
+  </div>
+</div>`
+
+    }
+
+
   }
-console.log(htmlAppend2);
-console.log(htmlAppend1);
-document.getElementById("info-carrusel").innerHTML += htmlAppend1
-document.getElementById("info-carrusel2").innerHTML += htmlAppend2
-// document.getElementsByTagName("info-carrusel3").data += htmlAppend2
-
+  console.log(htmlAppend1);
+  console.log(htmlAppend2);
+  document.getElementById("info-carrusel").innerHTML += htmlAppend1
+  document.getElementById("info-carrusel2").innerHTML += htmlAppend2
 
 }
+
 
 
 
