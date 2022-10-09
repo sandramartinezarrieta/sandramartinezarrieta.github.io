@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", function () {
         document.getElementById("login2").innerHTML = "Ingresar";
     }
     else {
-        document.getElementById("login2").innerHTML = localStorage.getItem("user");
+        document.getElementById("login").innerHTML = localStorage.getItem("user");
+        document.getElementById("login2").innerHTML="" ;
     };
     document.getElementById("cerrar").addEventListener("click", function () {
         if (document.getElementById("login2").innerHTML !== undefined) {
