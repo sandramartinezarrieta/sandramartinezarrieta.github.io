@@ -35,7 +35,7 @@ function showAlertError() {
 }
 
 
-//document.getElementById("validacion").addEventListener("click", ()=>{
-    
-//}) 
+document.getElementById("returnIn").addEventListener("click", ()=>{
+    window.location = "index.html"
+}) 
 
