@@ -16,27 +16,27 @@ function carga() {
             valorDatoCosto += datos[0].unitCost
             costo.innerHTML= datos[0].unitCost
             cantidad.value = datos[0].count
-            console.log(valorDatoCosto);
-            subtotal.innerHTML= 1*valorDatoCosto
+            console.log(datos[0]);
+            subtotal.innerHTML= datos[0].currency +" "+ 1*valorDatoCosto
 
         })
-        
+     return valorDatoCosto
 }
 
-console.log(cantidad.value)
 
+
+// funcion para cargar el fetch al cart cuando se carga el DOM
 document.addEventListener("DOMContentLoaded", function cargahtml() {
     carga();
+    console.log(valorDatoCosto)
+    // funcion para cambiar en tiempo real el valor del subtotal
     cantidad.addEventListener("change", function (e) {
         e.preventDefault
-    subtotal.innerHTML=e.value*15200
+    subtotal.innerHTML=cantidad.value*15200
+    console.log(cantidad.value)
     })
-    
-    // console.log(costo)
-    // console.log(subtotal)
     
 }
 
 )
 
-console.log(valorDatoCosto)
