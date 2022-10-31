@@ -61,8 +61,8 @@
         </div>
         <div class="card-body text-success d-flex flex-row">
 
-          <div class="d-flex  mx-0 col-2">
-
+          <div class="d-flex  mx-0 col-2" id="image">
+            
           </div>
           <div class="d-flex  mx-2 col-2">
             <p id="name">JUGUETE</p>
@@ -82,8 +82,57 @@
         </div>
         <div class="card-footer bg-transparent border border-bottom"></div>
       </div>
+      <div>
+        <h5>Tipo de envio</h5>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="premium" checked>
+        <label class="form-check-label" for="premium">
+          Premium de 2 a 5 dias(15%)
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="express">
+        <label class="form-check-label" for="express">
+          Express de 5 a 8 dias(7%)
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="Standard">
+        <label class="form-check-label" for="Standard">
+          Standard de 12 a 15 dias(5%)
+        </label>
+      </div>
+
+      <br>
+      <div>
+        <h5>Direccion de envio</h5>
+      </div>
+      <div class="mb-3" id="form">
+        <div class="container text-center">
+          <div class="row row-cols-12">
+            <div class="col-6"><label for="card" class="form-label d-flex justify-content-start">Calle</label>
+              <input type="text" class="form-control" placeholder="Anote su calle">
+
+            </div>
+
+            <div class="col-6"><label for="Inputcvc" class="form-label d-flex justify-content-start">Numero</label>
+              <input type="text" class="form-control" placeholder="Anote su numero">
+            </div>
+
+          </div>
+          <br>
+          <div class="col"><label for="exampleFormControlInput1"
+              class="form-label d-flex justify-content-start">Esquina</label>
+
+            <input type="text" class="form-control" placeholder="Anote su esquina">
+
+
+          </div>
+        </div>
+      </div>
     </div>
-    
+
   </main>
   <footer class="text-muted">
     <div class="container">
