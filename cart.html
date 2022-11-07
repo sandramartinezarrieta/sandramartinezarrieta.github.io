@@ -36,7 +36,7 @@
     </div>
   </nav>
   <main>
-    <div class="container">
+    <div class="container my-2">
       <div>
         <h5>Carrito de compras</h5>
         <div>
@@ -59,51 +59,32 @@
             <p><strong>Subtotal</strong></p>
           </div>
         </div>
-        <div class="card-body text-success d-flex flex-row">
-
-          <div class="d-flex  mx-0 col-2" id="image">
-            
-          </div>
-          <div class="d-flex  mx-2 col-2">
-            <p id="name">JUGUETE</p>
-          </div>
-          <div class="d-flex  mx-2 col-2">
-            <p id="cost">DIVERTIDO</p>
-          </div>
-          <div class="d-flex  mx-2 col-2">
-            <div class="m-auto">
-              <label for="cant" class="visually-hidden">Password</label>
-              <input type="number" class="form-control" id="cant" placeholder="Cant" value="">
-            </div>
-          </div>
-          <div class="d-flex  mx-2 col-4">
-            <p id="subtotal">PRUEBBA3</p>
-          </div>
-        </div>
+        <div id="cardHtml">PRUEBA</div>
         <div class="card-footer bg-transparent border border-bottom"></div>
       </div>
       <div>
         <h5>Tipo de envio</h5>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="premium" checked>
-        <label class="form-check-label" for="premium">
-          Premium de 2 a 5 dias(15%)
-        </label>
+      <div id="formchecked">
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="premium" onclick="envio();" checked>
+          <label class="form-check-label" for="premium">
+            Premium de 2 a 5 dias(15%)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="express" onclick="envio();">
+          <label class="form-check-label" for="express">
+            Express de 5 a 8 dias(7%)
+          </label>
+        </div>
+        <div class="form-check">
+          <input class="form-check-input" type="radio" name="flexRadioDefault" id="standard" onclick="envio();">
+          <label class="form-check-label" for="Standard">
+            Standard de 12 a 15 dias(5%)
+          </label>
+        </div>
       </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="express">
-        <label class="form-check-label" for="express">
-          Express de 5 a 8 dias(7%)
-        </label>
-      </div>
-      <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="Standard">
-        <label class="form-check-label" for="Standard">
-          Standard de 12 a 15 dias(5%)
-        </label>
-      </div>
-
       <br>
       <div>
         <h5>Direccion de envio</h5>
@@ -111,26 +92,74 @@
       <div class="mb-3" id="form">
         <div class="container text-center">
           <div class="row row-cols-12">
-            <div class="col-6"><label for="card" class="form-label d-flex justify-content-start">Calle</label>
-              <input type="text" class="form-control" placeholder="Anote su calle">
+            <div class="col-6"><label for="card" class="form-label d-flex justify-content-start" >Calle</label>
+              <input type="text" class="form-control" placeholder="Anote su calle" id="calle" required>
+              <div class="invalid-feedback">
+                Por favor escriba una calle
+              </div>
 
             </div>
 
-            <div class="col-6"><label for="Inputcvc" class="form-label d-flex justify-content-start">Numero</label>
-              <input type="text" class="form-control" placeholder="Anote su numero">
+            <div class="col-6"><label for="Inputcvc" class="form-label d-flex justify-content-start" >Numero</label>
+              <input type="text" class="form-control" placeholder="Anote su numero" id="numero" required>
+              <div class="invalid-feedback">
+                Por favor escriba un numero
+              </div>
             </div>
 
           </div>
           <br>
           <div class="col"><label for="exampleFormControlInput1"
-              class="form-label d-flex justify-content-start">Esquina</label>
-
-            <input type="text" class="form-control" placeholder="Anote su esquina">
+              class="form-label d-flex justify-content-start" id="esquina">Esquina</label>
+            <input type="text" class="form-control" placeholder="Anote su esquina"required>
+            <div class="invalid-feedback">
+              Por favor esscriba su esquina
+            </div>
 
 
           </div>
         </div>
       </div>
+      <div>
+        <h5>Costos </h5>
+        <ul class="list-group">
+          <li class="list-group-item d-flex justify-content-between">Subtotal <p id="sub"></p>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">Costo de envio <p id="envio"></p>
+          </li>
+          <li class="list-group-item d-flex justify-content-between">Total($) <p id="total"></p>
+          </li>
+        </ul>
+      </div class="border-end">
+      <div>
+        <h5>Forma de pago </h5>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#staticBackdrop">
+          Forma de pago
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+          aria-labelledby="staticBackdropLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+                prueba
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Enviar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <button type="submit" class="btn btn-primary" onclick="finalizarCompra()">Finalizar Compra</button>
     </div>
 
   </main>
