@@ -70,9 +70,7 @@ function envio(costo) {
     else if(costo==undefined){
         alert("SELECCIONAR CANTIDAD DE PRODUCTOS")
     }
-    else {
-        alert("NO HA SELECCIONADO NINGUN TIPO DE ENVIO")
-    }
+    
     envioHtml.innerHTML= "USD " + costoenvio
     return costoenvio
 }
@@ -83,9 +81,9 @@ function finalizarCompra() {
 
     if(calle.value==""|| esquina.value=="" || numero.value==""){
 alert("POR FAVOR RELLENE LOS CAMPOS CALLE, ESQUINA Y NUMERO")
-calle.classList+= text-bg-danger;
-esquina.classList+= text-bg-danger;
-numero.classList+= text-bg-danger;
+calle.classList.add= text-bg-danger;
+esquina.classList.add= text-bg-danger;
+numero.classList.add= text-bg-danger;
     }
     
 }
@@ -97,8 +95,7 @@ document.addEventListener("DOMContentLoaded", async function cargahtml() {
   let valorHTML = "USD " + subtotal;
   sub.innerHTML = valorHTML;
   total.innerHTML = valorHTML;
-  console.log(subtotal)
-  console.log(envio(subtotal))
+  
   
 
   // funcion para cambiar en tiempo real el valor del subtotal
@@ -106,7 +103,7 @@ document.addEventListener("DOMContentLoaded", async function cargahtml() {
   cantidad.addEventListener("change", function (e) {
     e.preventDefault;
     valorHTML = cantidad.value * valorCosto;
-    console.log(valorHTML)
+    subtotal=valorHTML
     document.getElementById("subtotal").innerHTML = valorHTML;
     sub.innerHTML = "USD " + valorHTML;
     envio(valorHTML)
