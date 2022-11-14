@@ -78,10 +78,9 @@ function envio(costo) {
 // funcion finalizar compra
 function finalizarCompra() {
    
-
     if(calle.value==""|| esquina.value=="" || numero.value==""){
 alert("POR FAVOR RELLENE LOS CAMPOS CALLE, ESQUINA Y NUMERO")
-calle.classList.add= text-bg-danger;
+calle.classList.add(" bg-danger");
 esquina.classList.add= text-bg-danger;
 numero.classList.add= text-bg-danger;
     }

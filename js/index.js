@@ -22,8 +22,21 @@ document.addEventListener("DOMContentLoaded", function () {
         if (document.getElementById("login2").innerHTML !== undefined) {
             document.getElementById("login2").innerHTML = "Ingresar";
             localStorage.removeItem("user");
+            localStorage.removeItem("name");
+            localStorage.removeItem("lastname");
+            localStorage.removeItem("cellphone");
             window.location = "login.html"
         }
 
     });
+    document.getElementById("myProfile").addEventListener("click", function () {
+        if (document.getElementById("login2").innerHTML == "") {
+            window.location = "my-profile.html"       
+        }
+        else {
+            window.location = "login.html"
+        }
+
+    });
+    
 });

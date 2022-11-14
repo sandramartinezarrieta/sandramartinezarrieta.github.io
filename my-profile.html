@@ -51,10 +51,82 @@
     </div>
   </nav>
   <main>
-    <div class="container">
-      <div class="alert alert-danger text-center" role="alert">
-        <h4 class="alert-heading">Funcionalidad en desarrollo</h4>
+    <div class="container mt-5">
+      <div class="card">
+        <div class="card-header">
+          <div class="d-flex justify-content-between" style=" height: fit-content">
+            <h3>Perfil</h3>
+            <!-- <img src="..." alt="..." style=""> -->
+          </div>
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Datos personales</h5>
+          <form class="row g-3 needs-validation" novalidate id="formData">
+            <div class="col-md-5">
+              <label for="firtsName" class="form-label">Primer Nombre <strong>*</strong></label>
+              <input type="text" class="form-control" id="firtsName" placeholder="Ejemplo: Gabriela" required>
+              <div class="invalid-feedback">
+                Por favor escriba un nombre
+              </div>
+            </div>
+            <div class="col-md-5">
+              <label for="secondName" class="form-label"> Segundo Nombre</label>
+              <input type="text" class="form-control" id="secondName" placeholder="Ejemplo: Esther">
+              <div class="valid-feedback">
+                Nombre aceptado
+              </div>
+            </div>
+            <div class="col-md-5">
+              <label for="lastName" class="form-label">Primer Apellido <strong>*</strong></label>
+              <input type="text" class="form-control" id="lastName" placeholder="Ejemplo: Martinez" required>
+              <div class="invalid-feedback">
+                Por favor escriba un Apellido
+              </div>
+            </div>
+            <div class="col-md-5">
+              <label for="secondLastName" class="form-label"> Segundo Apellido</label>
+              <input type="text" class="form-control" id="secondLastName" placeholder="Ejemplo: Fernandez">
+              <div class="valid-feedback">
+                Apellido aceptado
+              </div>
+            </div>
+            <div class="col-md-5">
+              <label for="correo" class="form-label">Correo <strong>*</strong></label>
+              <div class="input-group has-validation">
+                <span class="input-group-text" id="inputGroupPrepend">@</span>
+                <input type="email" class="form-control" id="correo"
+                  aria-describedby="inputGroupPrepend" required>
+                <div class="invalid-feedback">
+                  Por favor escriba un correo
+                </div>
+              </div>
+            </div>
+            <div class="col-md-6" style="height: 70px">
+              <label for="validationCustomUsername" class="form-label">Imagen de perfil</label>
+              <div class="input-group mb-4">
+                <input type="file" class="form-control" id="inputGroupFile02">
+                <label class="input-group-text" for="inputGroupFile02">Upload</label>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <label for="phoneNumber" class="form-label">Telefono <strong>*</strong></label>
+              <input type="tel"  pattern="[0-9]{9}" class="form-control" id="phoneNumber" placeholder="Ejemplo: 099333999" required>
+             </div>
+             <div class="invalid-feedback">
+              Por favor escriba un Telefono
+            </div>
+
+          </form>
+
+        </div>
+        <div class="card-footer text-muted">
+          <div class="col-12">
+            <button class="btn btn-primary" type="submit" id="changes" >Guardar Cambios</button>
+          </div>
+        </div>
+        <h6>* Estos datos son necesarios</h6>
       </div>
+
     </div>
   </main>
   <footer class="text-muted">
